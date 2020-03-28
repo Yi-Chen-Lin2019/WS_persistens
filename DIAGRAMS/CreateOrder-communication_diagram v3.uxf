@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>208</y>
+      <w>272</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>1.4:o = createOrder(e): GenericOrder
+lt=&lt;-</panel_attributes>
+    <additional_attributes>320.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>608</x>
+      <y>208</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>:OrderUI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>232</y>
+      <w>304</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>//1.5: insertOrder(o)
+1.5: ol = createOrderLine(p, quantity):SaleOrderLine
+1.8: setOrderLines(ol)
+1.11: o.setCustomer(c)
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>608</x>
+      <y>344</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>:OrderCtr</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>368</y>
+      <w>144</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>1.12: insertOrder(o)
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>584</x>
+      <y>504</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>:OrderDB</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>280</x>
+      <y>208</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>:MainUI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>64</x>
+      <y>208</y>
+      <w>232</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>1: createMainUI(employeeId)
+lt=&lt;-</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>200</x>
+      <y>344</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>:LegalPersonCtr</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>344</y>
+      <w>336</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>1.9: c = getCustomer(phoneNumber):LegalPerson	
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;400.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>368</y>
+      <w>320</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>1.10: c= getCustomer(customerId):LegalPerson
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>48</x>
+      <y>504</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>:LegalPersonDB</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>968</x>
+      <y>344</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>:ProductCtr</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>344</y>
+      <w>304</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>1.6: p= getProduct(barcode):ProductDescription
+lt=&lt;-</panel_attributes>
+    <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>904</x>
+      <y>528</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>:ProductDB</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>984</x>
+      <y>368</y>
+      <w>296</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>1.7: p= getProduct(barcode):ProductDescription
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;200.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>368</y>
+      <w>272</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>1.3: e= getEmployee(employeeId):LegalPerson
+lt=&lt;-</panel_attributes>
+    <additional_attributes>70.0;170.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>232</y>
+      <w>312</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>1.2: e= getEmployee(employeeID):LegalPerson
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;100.0;10.0</additional_attributes>
+  </element>
+</diagram>

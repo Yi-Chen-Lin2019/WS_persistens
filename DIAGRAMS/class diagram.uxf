@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>260</y>
+      <w>170</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>ProductCtr
+--
+-productDBIF: ProductDBIF
+--
++insertProduct(product: ProductDescription): ProductDescription</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>920</y>
+      <w>250</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+GenericOrder
+--
+-orderID: int
+-orderDate: DateTime
+-deliveryDate: DateTime
+-deliveryAddress: String
+-isDelivered: boolean
+-amount: double
+-employee: Employee
+--
++getOrderID(): int
++getOrderedDate(): DateTime
++getDeliveryDate(): DateTime
++getDeliveryAddress(): String
++getIsDelivered: boolean
++getAmount(): double
++getEmployee(): Employee
++setDeliveryDate(deliveryDate: DateTime): void
++setDeliveryAddress(address: String): void
++setIsDelivered(status: boolean): void
++setEmployee(e: Employee): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>260</y>
+      <w>180</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>OrderCtr
+--
+-orderDBIF: OrderDBIF
+-personCtr: LegalPersonCtr
+-productCtr: ProductCtr
+--
++insertOrder(order: GenericOrder): GenericOrder
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>25</y>
+      <w>75</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>MainMenuUI
+--
+oUI : OrderUI
+pUI : ProductUI
+cUI : CustomerUI
+//eUI : EmployeeUI
+//lUI : LoanUI
+--
+...
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>615</x>
+      <y>130</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>OrderUI
+--
+...
+--
+...
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>175</y>
+      <w>35</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>10.0;170.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>160</y>
+      <w>140</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>260.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>410</y>
+      <w>30</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>10.0;320.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>260</y>
+      <w>165</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>LegalPersonCtr
+--
+-legalPersonDBIF : LegalPersonDBIF
+--
++insertLegalPerson(person: LegalPerson): LegalPerson</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>85</y>
+      <w>80</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;90.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1055</x>
+      <y>910</y>
+      <w>250</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Product
+--
+-barcode: String
+-name: String
+-productType : String
+-price: double
+-supplyPrice: double
+-countryOfOrigin: String
+--
++getBarcode() : String
++getName() : String
++getProductType() : String
++getPrice(): double
++getSupplyPrice(): double 
++getCountryOfOrigin(): String
++setBarcode(barcode : String): void
++setName(name : String)
++setProductType (productType : String)
++setPrice(price: double): void
++setSupplyPrice(price: double): void
++setCountryOfOrigin(country: String): void
+
+  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>855</x>
+      <y>115</y>
+      <w>105</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ProductUI
+--
+...
+--
+...
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>85</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>220.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>855</x>
+      <y>1020</y>
+      <w>45</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>920</y>
+      <w>250</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+LegalPerson
+--
+-phoneNumber: String
+-email: String
+-address: String
+--
++getPhoneNumber(): String
++getEmail(): String
++getAddress() : String
++setPhoneNumber(phoneNumber: String): void
++setEmail(email: String): void
++setAddress(address : String): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>475</x>
+      <y>1185</y>
+      <w>245</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>SaleOrder
+--
+-customer: Customer
+-discount: Discount
+-orderLines: List&lt;SalesOrderLine&gt;
+
+
+--
++getCustomer(): Customer
++getDiscount(): Discount
++getOrderLines(): List&lt;SalesOrderLine&gt;
++getRentContracts(): List&lt;RentContract&gt;
++setCustomer(c: Customer): void
++setDiscount(discount: Discount): void
++setOrderLines(ol: SalesOrderLine): void
++setRentContracts(contract: RentContract): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>605</x>
+      <y>1085</y>
+      <w>40</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>715</x>
+      <y>290</y>
+      <w>30</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>705</x>
+      <y>405</y>
+      <w>280</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>540.0;10.0;540.0;60.0;10.0;60.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>885</y>
+      <w>1525</w>
+      <h>830</h>
+    </coordinates>
+    <panel_attributes>model
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>535</x>
+      <y>0</y>
+      <w>510</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>gui
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>485</x>
+      <y>225</y>
+      <w>660</w>
+      <h>265</h>
+    </coordinates>
+    <panel_attributes>ctr
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>535</x>
+      <y>570</y>
+      <w>135</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+OrderDBIF
+--
+...
+--
++findAll(): List&lt;GenericOrder&gt;
++findById(id: int): GenericOrder
+  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>615</y>
+      <w>150</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+LegalPersonDBIF
+--
+...
+--
++findAll(): List&lt;LegalPerson&gt;
++findById(id: int): LegalPerson
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1010</x>
+      <y>575</y>
+      <w>150</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ProductDBIF
+--
+...
+--
++findAll(): List&lt;ProductDescriptor&gt;
++findByBarcode(id: int): ProductDescriptor
++findByPName(name: String): List&lt;ProductDescriptor&gt;
+  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>410</y>
+      <w>30</w>
+      <h>215</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>10.0;410.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>405</y>
+      <w>95</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>170.0;340.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>845</x>
+      <y>540</y>
+      <w>95</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>DBConnection
+--
+-connection: Connection
+-static dbConnection: DBConnection
+-static final driverClass: String
+-static final dbName: String
+-static final serverAddress: String
+-static final serverPort: int
+-static final userName: String
+-static final password: String
+
+--
++static synchronized getInstance(): DBConnection
++startTransaction(): void
++commitTransaction(): void
++rollbackTransaction(): void
++getConnection(): Connection
++disconnect(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>565</y>
+      <w>190</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+
+</panel_attributes>
+    <additional_attributes>360.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>845</x>
+      <y>580</y>
+      <w>50</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+
+</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>935</x>
+      <y>560</y>
+      <w>85</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>535</x>
+      <y>735</y>
+      <w>135</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>OrderDB
+--
+_-findAllQ: String_
+_-findByIdQ: String_
+-findAllQ: PreparedStatement
+-findByIdQ: PreparedStatement
+--
+-buildObject(rs: ResultSet): GenericOrder
+-buildObjects(rs: ResultSet): List&lt;GenericOrder&gt;
+  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>745</x>
+      <y>745</y>
+      <w>185</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>LegalPersonDB
+--
+_-findAllQ: String_
+_-findByIdQ: String_
+-findAllQ: PreparedStatement
+-findByIdQ: PreparedStatement
+--
+-buildObject(rs: ResultSet): LegalPerson
+-buildObjects(rs: ResultSet): List&lt;LegalPerson&gt;
+  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>660</y>
+      <w>15</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>815</x>
+      <y>705</y>
+      <w>20</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>740</y>
+      <w>185</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>ProductDB
+--
+_-findAllQ: String_
+_-findByIdQ: String_
+-findAllQ: PreparedStatement
+-findByIdQ: PreparedStatement
+--
+-buildObject(rs: ResultSet): ProductDescription
+-buildObjects(rs: ResultSet): List&lt;ProductDescription&gt;
+  
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>670</y>
+      <w>20</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>1320</y>
+      <w>245</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>GenericOrderLine
+--
+-quantity: int
+
+--
++getQuantity(): int
++setQuantity(quantity: int): int
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>830</y>
+      <w>90</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>160.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>825</y>
+      <w>70</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>120.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>955</x>
+      <y>1100</y>
+      <w>165</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Organization
+--
+-organizationID: String
+-organizationName: String
+-CVR: String
+-customerRole: CustomerRole
+-supplierRole: SupplierRole
+--
++getOrganizationID(): String
++getOrganizationName(): String
++getCVR(): String
++getCustomerRole(): CustomerRole
++getSupplierRole(): SupplierRole
+//+setOrganizationID(id: String): void
++setOrganizationName(name: String): void
++setCVR(cvr: String): void
++setCustomerRole(c: CustomerRole): void
++setSupplierRole(s: SupplierRole): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>795</x>
+      <y>1100</y>
+      <w>155</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-id: String
+-fName: String
+-lName: String
+-employeeRole: EmployeeRole
+-customerRole: CustomerRole
+-supplierRole: SupplierRole
+--
+layer=1
++getId: String
++getfName(): String
++getlName(): String
++getEmployeeRole(): EmployeeRole
++getCustomerRole(): CustomerRole
++getSupplierRole(): SupplierRole
++setName(name: String): String
++setEmployeeRole(e: EmployeeRole): void
++setCustomerRole(c: CustomerRole): void
++setSupplierRole(s: SupplierRole): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>925</x>
+      <y>1020</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>1280</y>
+      <w>150</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>EmployeeRole
+-
+-ssn: String
+-title: String
+-salary: double
+--
++getSSN(): String
++getTitle(): String
++getSalary(): double
+//+setEmployeeId(id: String): void
++setSSN(ssn: String): void
++setTitle(title: String): void
++setSalary(salary: double): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>965</x>
+      <y>1285</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CustomerRole
+--
+-customerId: String
+--
++getCustomerId(): String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1060</x>
+      <y>1285</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>SupplierRole
+--
+-supplyType: String
+--
++getSupplyType(): String
++setSupplyType(type: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>1240</y>
+      <w>50</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;80.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>1240</y>
+      <w>120</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>220.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>925</x>
+      <y>1240</y>
+      <w>175</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>330.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>1230</y>
+      <w>115</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>210.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1005</x>
+      <y>1230</y>
+      <w>20</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>20.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>725</x>
+      <y>1085</y>
+      <w>95</w>
+      <h>235</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+
+</panel_attributes>
+    <additional_attributes>170.0;440.0;10.0;440.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>1305</y>
+      <w>330</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+
+</panel_attributes>
+    <additional_attributes>630.0;60.0;630.0;240.0;10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>1460</y>
+      <w>125</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>SalesOrderLine
+--
+-product: ProductDescription
+
+--
++getProduct(): ProductDescription
++setProduct(barcode: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>365</x>
+      <y>1405</y>
+      <w>105</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>1305</y>
+      <w>15</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;310.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>1130</y>
+      <w>95</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Clothing
+--
+-size: String
+-colour: String
+--
++getSize(): String
++getColour(): String
++setSize(size: String): void
++setColour(color: String): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1235</x>
+      <y>1130</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Equipment
+--
+-type: String
+-description: String
+--
++getType(): String
++getDescription(): String
++setType(type: String): void
++setDescription(description: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>1130</y>
+      <w>125</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>GunReplica
+--
+-calibre: double
+-material: String
+--
++getCalibre(): double
++getMaterial(): String
++setCalibre(calibre: double): void
++setMaterial(material: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1150</x>
+      <y>1080</y>
+      <w>50</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1210</x>
+      <y>1080</y>
+      <w>55</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1255</x>
+      <y>1080</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>1050</y>
+      <w>950</w>
+      <h>505</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+</panel_attributes>
+    <additional_attributes>1570.0;10.0;1880.0;10.0;1880.0;990.0;10.0;980.0;10.0;930.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>1420</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>RentContract
+--
+-returnDate: DateTime
+-isReturned: boolean
+--
++getReturnDate(): DateTime
++getIsReturned: boolean
++setReturnDate(date: DateTime): void
++setIsReturned(status: boolean): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>55</x>
+      <y>1550</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>RentOrderLine
+--
+-product: ProductDescription
+--
++getProduct(): ProductDescription
++setProduct(barcode: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>65</x>
+      <y>1320</y>
+      <w>45</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;200.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>1505</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>505</x>
+      <y>515</y>
+      <w>810</w>
+      <h>365</h>
+    </coordinates>
+    <panel_attributes>db
+bg=#3c7a00</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>820</x>
+      <y>835</y>
+      <w>100</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>180.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>535</x>
+      <y>1330</y>
+      <w>155</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>Discount
+--
+-discountValue: double
+-isDeliveryFree: boolean
+
+--
++getDiscountValue(): double
++getIsDeliveryFree(): boolean
++setDiscountValue(value: double): void
++setIsDeliveryFree(isFree: boolean): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>1305</y>
+      <w>25</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>30.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1040</x>
+      <y>1360</y>
+      <w>205</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=red
+layer=1
+so...
+we store ssn as employee id
+customer with static id?
+how about supplier?
+and we still have id in both legalPerson and Organization</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>395</x>
+      <y>145</y>
+      <w>230</w>
+      <h>785</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>310.0;1550.0;10.0;1360.0;30.0;10.0;440.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>955</x>
+      <y>140</y>
+      <w>390</w>
+      <h>780</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>530.0;1540.0;760.0;1480.0;740.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>125</y>
+      <w>105</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>LegalPersonUI
+--
+layer=1
+...
+--
+...
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>755</x>
+      <y>85</y>
+      <w>45</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>70.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>170</y>
+      <w>35</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>50.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>1405</y>
+      <w>155</w>
+      <h>185</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;250.0;350.0;10.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>1230</y>
+      <w>200</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>RentOrder
+--
+-customer: Customer
+-rentContract: List&lt;RentContract&gt;
+
+--
++getCustomer(): Customer
++getRentContracts(): List&lt;RentContract&gt;
++setCustomer(c: Customer): void
++setRentContracts(contract: RentContract): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>1085</y>
+      <w>440</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>860.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>105</x>
+      <y>1030</y>
+      <w>1375</w>
+      <h>645</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+</panel_attributes>
+    <additional_attributes>2400.0;10.0;2730.0;10.0;2720.0;1270.0;10.0;1270.0;10.0;1140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>1320</y>
+      <w>700</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+
+</panel_attributes>
+    <additional_attributes>1370.0;180.0;1370.0;260.0;10.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
